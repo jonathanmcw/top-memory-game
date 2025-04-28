@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import Card from './components/Card'
-// import GameBoard from './components/GameBoard'
-// import ScoreBoard from './components/Scoreboard'
+import ScoreBoard from './components/Scoreboard'
+import GameBoard from './components/Gameboard'
 
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
@@ -12,13 +11,8 @@ function App() {
 
   return (
     <>
-      <div className="memory-grid">
-        {/* <h1>Memory Game</h1>    */}
-        <Card/>     
-        <Card/>     
-        <Card/>     
-        <Card/>     
-      </div>
+      <ScoreBoard/>
+      <GameBoard/>
       {/* // if loading then show loading screen
         // Go to fetch images from API if needed
       // if loaded show game
@@ -27,6 +21,10 @@ function App() {
     </>
   )
 }
+
+
+
+
 
 export default App
 

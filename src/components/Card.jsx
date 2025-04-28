@@ -1,20 +1,14 @@
-export default function Card() {
+import { useState } from 'react'
 
-    function flipCard(e) {
-        const card = e.currentTarget;
-        console.log(`Card is flipped ${card}`)
-        // const cardId = card.getAttribute('id');
-        // console.log(cardId);
-    
-        // event.target
-    }
+export default function Card({id, content, isPicked, onPick}) {
+    // const [CardIsPicked, setCardIsPicked] = useState("")
 
     return(
         // ??? key ??? ///
-        <div className="memory-card" onClick={flipCard}> 
-            <div className="card-inner">
+        <div className="memory-card" id={id} onClick={onPick}> 
+            <div className={`card-inner ${ (isPicked) ? "is-picked" : ""}`}>
                 <div className="card-front">
-                    XXXXXX
+                    {content}
                 </div>
                 <div className="card-back">
                     
